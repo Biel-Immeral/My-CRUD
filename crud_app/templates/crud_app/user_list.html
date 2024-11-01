@@ -1,0 +1,12 @@
+<h1>Usuários</h1>
+<a href="{% url 'crud_create' %}" class="btn btn-primary">Criar Cadastro</a>
+<p>
+    <ul>
+        {% for u in user%}
+            <li>{{ u.user_name }} 
+                <a href="{% url 'crud_update' u.user_id %}" class="btn btn-primary">Alterar</a> 
+                <a href="{% url 'crud_delete' u.user_id %}" class="btn btn-primary">Apagar</a>
+            </li> 
+        {% endfor %}
+    </ul> 
+</p>

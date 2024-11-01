@@ -1,0 +1,11 @@
+<h1>Excluir Cadastro? </h1>
+{% block content %}
+    <p>Certeza que deseja excluir? </p>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+                
+        <button type="submit" class="btn btn-danger">Atualizar</button>
+        <a href="{% url 'crud_list' %}" class="btn btn-primary">Cancelar</a>
+    </form>
+{% endblock content %}
